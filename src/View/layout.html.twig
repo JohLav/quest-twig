@@ -12,25 +12,28 @@
     </title>
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <link rel="icon" href="/assets/images/favicon.png">
+{#        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="icon" href="/assets/images/favicon.png">#}
     {% endblock %}
     {# block javascripts #}{# endblock #}
 </head>
 
 <body>
 
+{% include '_header.html.twig' %}
+
 {% block header %}
-    {% include 'navbar.html.twig' %}
+    <header></header>
 {% endblock %}
 
 {% block content %}
-    <h1>Hello {{ name }} !</h1>
 {% endblock %}
 
 {% block footer %}
     <footer></footer>
 {% endblock %}
+
+{% include '_footer.html.twig' %}
 
 </body>
 </html>
